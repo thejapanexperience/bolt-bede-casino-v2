@@ -42,10 +42,10 @@ export function* getGamesRequest(action) {
   try {
     const response = yield call(axios, {
       method: 'get',
-      url: `https://qa02-ritz.bedegaming.net/api/v5/games?take=1000`,
+      url: `https://qa02-bedecasino.bedegaming.net/api/v5/games?take=1000`,
       headers: {
-        'X-Correlation-Token': '1f705794-6682-4365-a0eb-5f1dd6a3d0eb',
-        'X-Site-Code': 'theritz.com',
+        'X-Correlation-Token': '175ff72e-dfde-4668-a032-6c5a0910eba4',
+        'X-Site-Code': 'bedecasino',
         'X-Spine-Client': 'bolt',
       },
     })
