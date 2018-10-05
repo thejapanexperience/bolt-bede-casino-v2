@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 // Components
 import Layout from '../components/layout'
-import Games from '../pages/games'
+import Data from '../pages/data'
 
 const IndexPage = () => {
   return (
@@ -13,7 +13,7 @@ const IndexPage = () => {
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <Link to="/page-2/">Go to page 2</Link>
-      <Games />
+      <Data />
     </Layout>
   )
 }

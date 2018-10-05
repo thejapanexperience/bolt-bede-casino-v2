@@ -2,7 +2,7 @@ import { createStore, compose, applyMiddleware, combineReducers } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
 import * as reducers from './indexReducers'
-import { gamesSaga } from './indexSagas'
+import { feedsSaga, gamesSaga } from './indexSagas'
 
 const rootReducer = combineReducers(reducers)
 
@@ -30,4 +30,5 @@ if (module.hot) {
 
 export default store
 
+sagaMiddleware.run(feedsSaga)
 sagaMiddleware.run(gamesSaga)
