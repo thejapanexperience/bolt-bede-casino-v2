@@ -2,9 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import styled, { createGlobalStyle } from 'styled-components'
+import { Header as UnstyledHeader } from 'tlob-library'
 
-import Header from './header'
-import './layout.css'
+const GlobalStyle = createGlobalStyle`
+  html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 10px;
+  }
+`
+
+const Header = styled(UnstyledHeader)`
+  background-color: #999;
+  color: #fff;
+  padding: 1rem;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,6 +41,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
+        <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
