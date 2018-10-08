@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled, { createGlobalStyle } from 'styled-components'
-import { Header as UnstyledHeader } from 'tlob-library'
+import { createGlobalStyle } from 'styled-components'
+import Header from './Header'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -11,12 +11,12 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-size: 10px;
   }
-`
 
-const Header = styled(UnstyledHeader)`
-  background-color: #999;
-  color: #fff;
-  padding: 1rem;
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+  }
 `
 
 const Layout = ({ children }) => (
