@@ -1,0 +1,12 @@
+ajax:
+  qa02:
+    headers:
+      X-Correlation-Token:
+        feeds: 'b9cf717c-39cb-4cf5-adad-0af58d79a3aa'
+        games: '175ff72e-dfde-4668-a032-6c5a0910eba4'
+      X-Site-Code: 'bedecasino'
+      X-Spine-Client: 'bolt'
+    url:
+      base: 'https://qa02-bedecasino.bedegaming.net'
+      feeds: '/feeds/v1/recentwinners?take=25'
+      games: '/api/v5/games?take=1000'

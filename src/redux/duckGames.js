@@ -1,5 +1,6 @@
 // Imports
 import axios from 'axios'
+import * as config from '../config/config.yml'
 import { all, takeEvery, call, put } from 'redux-saga/effects'
 
 // Actions
@@ -42,11 +43,12 @@ export function* getGamesRequest(action) {
   try {
     const response = yield call(axios, {
       method: 'get',
-      url: `https://qa02-bedecasino.bedegaming.net/api/v5/games?take=1000`,
+      url: config.ajax.qa02.url.base + config.ajax.qa02.url.games,
       headers: {
-        'X-Correlation-Token': '175ff72e-dfde-4668-a032-6c5a0910eba4',
-        'X-Site-Code': 'bedecasino',
-        'X-Spine-Client': 'bolt',
+        'X-Correlation-Token':
+          config.ajax.qa02.headers['X-Correlation-Token'].games,
+        'X-Site-Code': config.ajax.qa02.headers['X-Site-Code'],
+        'X-Spine-Client': config.ajax.qa02.headers['X-Spine-Client'],
       },
     })
     const games = response.data.items
