@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Bolt team",
   "dependencies": {
+    "@bedegaming/spine-player-client-js": "^0.4.3",
     "axios": "^0.18.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",

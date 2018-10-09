@@ -1,7 +1,11 @@
-// Imports
+// 3rd Party Imports
 import axios from 'axios'
-import * as config from '../config/config.yml'
 import { all, takeEvery, call, put } from 'redux-saga/effects'
+
+// Bede Imports
+
+// Config
+import * as config from '../config/config.yml'
 
 // Actions
 export const GET_GAMES = 'GET_GAMES'
@@ -43,7 +47,7 @@ export function* getGamesRequest(action) {
   try {
     const response = yield call(axios, {
       method: 'get',
-      url: config.ajax.qa02.url.base + config.ajax.qa02.url.games,
+      url: config.ajax.qa02.url.games,
       headers: {
         'X-Correlation-Token':
           config.ajax.qa02.headers['X-Correlation-Token'].games,

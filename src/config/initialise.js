@@ -3,6 +3,7 @@
 // Action Creators
 import { getGames } from '../redux/duckGames'
 import { getFeeds } from '../redux/duckFeeds'
+import { logInUser } from '../redux/duckUser'
 
 // Components
 
@@ -10,4 +11,5 @@ import { getFeeds } from '../redux/duckFeeds'
 export const getData = store => {
   store.dispatch(getFeeds())
   store.dispatch(getGames())
+  store.dispatch(logInUser())
 }

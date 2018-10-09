@@ -1,4 +1,5 @@
-import { gamesSaga } from './duckGames.js'
 import { feedsSaga } from './duckFeeds.js'
+import { gamesSaga } from './duckGames.js'
+import { userSaga } from './duckUser.js'
 
-export { feedsSaga, gamesSaga }
+export { feedsSaga, gamesSaga, userSaga }

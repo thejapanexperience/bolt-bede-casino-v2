@@ -1,7 +1,11 @@
-// Imports
+// 3rd Party Imports
 import axios from 'axios'
-import * as config from '../config/config.yml'
 import { all, takeEvery, call, put } from 'redux-saga/effects'
+
+// Bede Imports
+
+// Config
+import * as config from '../config/config.yml'
 
 // Actions
 export const GET_WINNERS_FEED = 'GET_WINNERS_FEED'
@@ -34,7 +38,7 @@ export function* feedsSaga() {
   yield all([getWinnersFeedSaga()]) // yield is like 'await'
 }
 
-// Get Feeds Saga
+// getWinnersFeedSaga
 export function* getWinnersFeedSaga() {
   yield takeEvery(GET_WINNERS_FEED, getWinnersFeedsRequest) // takeEvery will hijack actions
 }
@@ -43,7 +47,7 @@ export function* getWinnersFeedsRequest(action) {
   try {
     const response = yield call(axios, {
       method: 'get',
-      url: config.ajax.qa02.url.base + config.ajax.qa02.url.feeds,
+      url: config.ajax.qa02.url.feeds,
       headers: {
         'X-Correlation-Token':
           config.ajax.qa02.headers['X-Correlation-Token'].feeds,
