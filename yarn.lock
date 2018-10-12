@@ -4589,6 +4589,11 @@ gatsby-plugin-react-helmet@^3.0.0:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-root-import@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/gatsby-plugin-root-import/-/gatsby-plugin-root-import-2.0.4.tgz#262c01c2384df498369a808b1741379527ecb57f"
+  integrity sha512-moYTVSZgItAC2/hJ/+QBnJSmnVAkYZ+oGH5k0WUwpPf49cfAF3bHh9ZHCF+5Zf4viq42n4z7teIGB5/VsjcNQQ==
+
 gatsby-react-router-scroll@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.0.tgz#fb96e9d0b4454ad819b430388539bc1762f04442"
@@ -9407,6 +9412,9 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+"tlob-library@file:../tlob-library":
+  version "1.0.0"
 
 tmp@^0.0.31:
   version "0.0.31"

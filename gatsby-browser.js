@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import store from './src/redux/store'
+import store from 'tlob-library-redux/store'
 import { getData } from './src/config/initialise.js'
 
 export const wrapRootElement = ({ element }) => {

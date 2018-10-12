@@ -9,7 +9,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { renderToString } from 'react-dom/server'
-import store from './src/redux/store'
+import store from 'tlob-library-redux/store'
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   console.log('replacerenderer')

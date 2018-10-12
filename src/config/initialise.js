@@ -1,9 +1,9 @@
 // Packages
 
 // Action Creators
-import { getGames } from '../redux/duckGames'
-import { getFeeds } from '../redux/duckFeeds'
-import { logInUser } from '../redux/duckUser'
+import { getGames } from 'tlob-library-redux/duckGames'
+import { getFeeds } from 'tlob-library-redux/duckFeeds'
+import { logInUser } from 'tlob-library-redux/duckUser'
 
 // Components
 

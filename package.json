@@ -16,7 +16,8 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
-    "styled-components": "^4.0.0-beta.10"
+    "styled-components": "^4.0.0-beta.10",
+    "tlob-library": "file:../tlob-library"
   },
   "keywords": [
     "gatsby"
@@ -31,6 +32,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.4",
     "prettier": "^1.14.2"
   },
   "repository": {

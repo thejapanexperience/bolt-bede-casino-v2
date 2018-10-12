@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -17,5 +19,16 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-root-import`,
+      options: {
+        'tlob-theme': path.join(__dirname, 'src'),
+        'tlob-theme-config': path.join(__dirname, 'src/config'),
+        'tlob-library-redux': path.join(
+          __dirname,
+          'node_modules/tlob-library/src/redux'
+        ),
+      },
+    },
   ],
 }
