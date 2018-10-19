@@ -1,7 +1,7 @@
 // Packages
 import React from 'react'
-import Layout from '../components/layout'
-import { Data as UnstyledData } from 'tlob-library'
+import Layout from '../components/Layout'
+// import { Data as UnstyledData } from 'tlob-library'
 
 const IndexPage = () => (
   <Layout>
