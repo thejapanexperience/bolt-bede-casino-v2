@@ -24,10 +24,7 @@ module.exports = {
       options: {
         'tlob-theme': path.join(__dirname, 'src'),
         'tlob-theme-config': path.join(__dirname, 'src/config'),
-        'tlob-library-redux': path.join(
-          __dirname,
-          'node_modules/tlob-library/src/redux'
-        ),
+        '@bedegaming/tlob-library': path.join(__dirname, '../tlob-library/lib'),
       },
     },
   ],

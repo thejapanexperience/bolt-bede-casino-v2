@@ -784,6 +784,11 @@
   dependencies:
     node-uuid "^1.4.8"
 
+"@bedegaming/tlob-library@^1.0.0":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@bedegaming/tlob-library/-/tlob-library-1.0.15.tgz#8d53ef3a4f2b5b7c1e8de5333914f6bd3b9d00d3"
+  integrity sha512-wATY7WlBIC9/uK7veNGFYrVdTMu+n4NTk8jOdQhWDYJFobaF1Tb0E/24vfY17/2ECVU0kMqUiu2VhzlpjZrH5A==
+
 "@emotion/is-prop-valid@^0.6.8":
   version "0.6.8"
   resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-0.6.8.tgz#68ad02831da41213a2089d2cab4e8ac8b30cbd85"
@@ -9412,9 +9417,6 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
-
-"tlob-library@file:../tlob-library":
-  version "1.0.0"
 
 tmp@^0.0.31:
   version "0.0.31"

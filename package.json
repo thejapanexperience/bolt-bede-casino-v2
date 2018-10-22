@@ -5,6 +5,7 @@
   "author": "Bolt team",
   "dependencies": {
     "@bedegaming/spine-player-client-js": "^0.4.3",
+    "@bedegaming/tlob-library": "^1.0.0",
     "axios": "^0.18.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
@@ -16,8 +17,7 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
-    "styled-components": "^4.0.0-beta.10",
-    "tlob-library": "file:../tlob-library"
+    "styled-components": "^4.0.0-beta.10"
   },
   "keywords": [
     "gatsby"
