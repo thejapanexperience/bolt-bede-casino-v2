@@ -5,14 +5,21 @@ import styled from 'styled-components'
 // Gatsby
 
 // Library
-import { HOLogin, Button } from '@bedegaming/tlob-library'
+import { LoginHO, Button } from '@bedegaming/tlob-library'
 
 // Components
 // import Button from '../Button'
 
 // Make available to children
 const Login = props => {
-  const { className, handleSubmit, handleChange, password, username } = props
+  const {
+    className,
+    handleChange,
+    handleSubmit,
+    handleGetTransactions,
+    password,
+    username,
+  } = props
 
   return (
     <div className={className}>
@@ -45,24 +52,20 @@ const Login = props => {
           onClick={handleSubmit}
           title="Log In"
         />
+        <Button
+          className="submitButton"
+          onClick={handleGetTransactions}
+          title="Get Transactions"
+        />
       </div>
     </div>
   )
 }
 
-const UnstyledLogin = HOLogin(Login)
+const UnstyledLogin = LoginHO(Login)
 
 // Styled Components Layout
-const LayoutLogin = styled(UnstyledLogin)`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-
-  .container {
-    display: flex;
-    width: 100%;
-  }
-`
+const LayoutLogin = styled(UnstyledLogin)``
 // Styled Components Styling
 const StyledLogin = styled(LayoutLogin)``
 

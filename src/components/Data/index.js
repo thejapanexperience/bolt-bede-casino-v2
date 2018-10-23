@@ -79,14 +79,4 @@ const StyledData = styled(LayoutData)`
   }
 `
 
-// Add Children
-// const DataChildren = ({ children }) => {
-//   return (
-//     <div>
-//       <StyledData />
-//       {children}
-//     </div>
-//   )
-// }
-
 export default () => <StyledData />

@@ -34,17 +34,17 @@ const LogoLink = styled(Link)`
   }
 `
 
-const Buttons = styled.div`
-  display: flex;
-  padding: 1rem;
-`
+// const Buttons = styled.div`
+//   display: flex;
+//   padding: 1rem;
+// `
 
-const ButtonPrimary = styled(Button)`
-  background-image: linear-gradient(90deg, #ff345f 0%, #ff9268 100%);
-  border: 0;
-  color: #fff;
-  margin-left: 1rem;
-`
+// const ButtonPrimary = styled(Button)`
+//   background-image: linear-gradient(90deg, #ff345f 0%, #ff9268 100%);
+//   border: 0;
+//   color: #fff;
+//   margin-left: 1rem;
+// `
 
 export default ({ className, siteTitle }) => (
   <Header siteTitle={siteTitle}>
@@ -62,9 +62,6 @@ export default ({ className, siteTitle }) => (
         <Button title="Login" />
       </Link>
       <Button title="Join now" />
-      <Link to="/data/">
-        <Button title="Data" />
-      </Link>
     </div>
   </Header>
 )

@@ -10,15 +10,13 @@ const Container = styled.div`
   margin: 3rem 0;
 `
 
-export default ({ games }) => (
-  <Container>
-    {
-      games.map((game, i) =>
-        <GameItem
-          key={i}
-          game={game}
-        />
-      )
-    }
-  </Container>
-)
+export default ({ games }) => {
+  console.log(games)
+  return (
+    <Container>
+      {games.map((game, i) => (
+        <GameItem key={i} game={game} />
+      ))}
+    </Container>
+  )
+}

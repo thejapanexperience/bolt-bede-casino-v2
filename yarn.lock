@@ -785,9 +785,9 @@
     node-uuid "^1.4.8"
 
 "@bedegaming/tlob-library@^1.0.0":
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/@bedegaming/tlob-library/-/tlob-library-1.0.15.tgz#8d53ef3a4f2b5b7c1e8de5333914f6bd3b9d00d3"
-  integrity sha512-wATY7WlBIC9/uK7veNGFYrVdTMu+n4NTk8jOdQhWDYJFobaF1Tb0E/24vfY17/2ECVU0kMqUiu2VhzlpjZrH5A==
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/@bedegaming/tlob-library/-/tlob-library-1.0.16.tgz#d60744f6ed4ab8f85a9d03fdc3609623fcfad847"
+  integrity sha512-MH1nt9yrWYhOdXwjZwlUlNLsfZuLsCkWsAUVqjNoudTMLRVApQNhGBCv1iQ/Msu/AIA4EQAOCu/F5P/ih8bW9w==
 
 "@emotion/is-prop-valid@^0.6.8":
   version "0.6.8"
