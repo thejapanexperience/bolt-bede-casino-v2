@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import styled, { createGlobalStyle } from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import styled, { createGlobalStyle } from 'styled-components';
 
 // Theme imports
-import Header from '../Header'
+import Header from '../Header';
 
 // Components
-import Modals from '../Modals'
+import Modals from '../Modals';
 
 // Global styles
 const GlobalStyle = createGlobalStyle`
@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-`
+`;
 
 const Content = styled.main`
   background-color: #f9f9f9;
@@ -35,12 +35,12 @@ const Content = styled.main`
   justify-content: center;
   margin: 0px auto;
   padding: 0px 1.0875rem 1.45rem;
-`
+`;
 
 const Wrapper = styled.div`
   max-width: 130rem;
   width: 100%;
-`
+`;
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -73,10 +73,10 @@ const Layout = ({ children }) => (
       </>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
