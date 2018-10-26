@@ -785,9 +785,9 @@
     node-uuid "^1.4.8"
 
 "@bedegaming/tlob-library@^1.0.0":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@bedegaming/tlob-library/-/tlob-library-1.0.16.tgz#d60744f6ed4ab8f85a9d03fdc3609623fcfad847"
-  integrity sha512-MH1nt9yrWYhOdXwjZwlUlNLsfZuLsCkWsAUVqjNoudTMLRVApQNhGBCv1iQ/Msu/AIA4EQAOCu/F5P/ih8bW9w==
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/@bedegaming/tlob-library/-/tlob-library-1.0.19.tgz#b0df62d063c3510288e3868e81a1adbe1da4c9e8"
+  integrity sha512-SakCL/rOPhtn2/9IyL1Q9IjyXmjSk90mM/+6qetSsAW48TEeIauXaaf0+aq+SzFZPJb8kVvXIpiaRIw9sbtNNA==
 
 "@emotion/is-prop-valid@^0.6.8":
   version "0.6.8"
@@ -6213,6 +6213,11 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "~3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash.toarray@^4.4.0:
   version "4.4.0"
   resolved "https://registry.npmjs.org/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
@@ -8086,6 +8091,15 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
+
+react-on-screen@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-on-screen/-/react-on-screen-2.0.4.tgz#afe2185a9eb4b9ec53cff961790b843ab1c25467"
+  integrity sha512-2iiIulBu83MiPug3y0EH0WR/h+xk2KGmR+UWn6zhcew0dXTU8mz7VDVL4UguGrtWCmxFL8FRA0/Mt8HHeLo23A==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.0"
+    shallowequal "^1.0.2"
 
 react-redux@^5.0.7:
   version "5.0.7"

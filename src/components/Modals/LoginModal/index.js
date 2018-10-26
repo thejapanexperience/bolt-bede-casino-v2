@@ -8,7 +8,7 @@ import styled from 'styled-components'
 import { LoginHO } from '@bedegaming/tlob-library'
 
 // Components
-import Button from '../Button'
+import Button from '../../Button'
 
 // Make available to children
 const Login = props => {
@@ -16,9 +16,9 @@ const Login = props => {
     className,
     handleChange,
     submitLogin,
-    handleGetUserData,
     password,
     username,
+    closeModals,
   } = props
 
   return (
@@ -27,7 +27,7 @@ const Login = props => {
         <h1>Login </h1>
       </div>
       <div className="container formContainer">
-        <form>
+        <div>
           <label>
             User Name:
             <input
@@ -46,23 +46,41 @@ const Login = props => {
               onChange={handleChange}
             />
           </label>
-        </form>
-        <Button className="submitButton" onClick={submitLogin} title="Log In" />
-        <Button
-          className="submitButton"
-          onClick={handleGetUserData}
-          title="Get Transactions"
-        />
+          <Button
+            type="button"
+            className="submitButton"
+            primary="primary"
+            onClick={submitLogin}
+            title="Log In"
+          />
+
+          <Button
+            type="button"
+            className="closeButton"
+            primary="primary"
+            onClick={closeModals}
+            title="X"
+          />
+        </div>
       </div>
     </div>
   )
 }
 
-const UnstyledLogin = LoginHO(Login)
+const UnstyledLoginModal = LoginHO(Login)
 
 // Styled Components Layout
-const LayoutLogin = styled(UnstyledLogin)``
+const LayoutLoginModal = styled(UnstyledLoginModal)`
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  height: calc(100% - 8rem);
+  padding: 3rem;
+  z-index: 500;
+`
 // Styled Components Styling
-const StyledLogin = styled(LayoutLogin)``
+const StyledLoginModal = styled(LayoutLoginModal)``
 
-export default () => <StyledLogin />
+export default () => <StyledLoginModal />

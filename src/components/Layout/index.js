@@ -7,6 +7,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 // Theme imports
 import Header from '../Header'
 
+// Components
+import Modals from '../Modals'
+
 // Global styles
 const GlobalStyle = createGlobalStyle`
   html {
@@ -64,9 +67,8 @@ const Layout = ({ children }) => (
         <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
-          <Wrapper>
-            {children}
-          </Wrapper>
+          <Modals />
+          <Wrapper>{children}</Wrapper>
         </Content>
       </>
     )}

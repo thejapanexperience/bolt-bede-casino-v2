@@ -24,6 +24,8 @@ module.exports = {
       options: {
         'tlob-theme': path.join(__dirname, 'src'),
         'tlob-theme-config': path.join(__dirname, 'src/config'),
+
+        // Turn on local dev for library
         '@bedegaming/tlob-library': path.join(__dirname, '../tlob-library/lib'),
       },
     },

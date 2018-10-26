@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import TrackVisibility from 'react-on-screen'
 
 import Button from '../Button'
 
@@ -22,7 +23,7 @@ const GameItem = styled.div`
 
   &:hover {
     box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
-    transform: translateY(-.5rem);
+    transform: translateY(-0.5rem);
   }
 `
 
@@ -31,6 +32,21 @@ const Image = styled.img`
   flex: 1;
   width: 100%;
 `
+const BlurryImage = styled.img`
+  -webkit-filter: invert(0.8);
+  filter: invert(0.8);
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s;
+  width: 100%;
+`
+
+const VisibleImage = ({ isVisible, src }) => {
+  if (isVisible) {
+    return <BlurryImage style={{ opacity: '0' }} src={src} />
+  }
+  return <BlurryImage src={src} />
+}
 
 const Overlay = styled.div`
   align-items: center;
@@ -97,6 +113,9 @@ export default ({ game: { catalogueName, images } }) => {
 
   return (
     <GameItem onClick={() => handleClick(catalogueName)}>
+      <TrackVisibility>
+        <VisibleImage src={thumbnail[0].url} />
+      </TrackVisibility>
       <Image src={thumbnail[0].url} />
       <Overlay>
         <OverlayText>{catalogueName}</OverlayText>
@@ -106,6 +125,6 @@ export default ({ game: { catalogueName, images } }) => {
   )
 }
 
-const handleClick = (catalogueName) => {
+const handleClick = catalogueName => {
   console.log(catalogueName)
 }

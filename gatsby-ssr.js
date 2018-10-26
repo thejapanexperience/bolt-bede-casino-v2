@@ -12,7 +12,6 @@ import { renderToString } from 'react-dom/server'
 import { store } from '@bedegaming/tlob-library'
 
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
-  console.log('replacerenderer')
   const ConnectedBody = () => <Provider store={store}>{bodyComponent}</Provider>
   replaceBodyHTMLString(renderToString(<ConnectedBody />))
 }

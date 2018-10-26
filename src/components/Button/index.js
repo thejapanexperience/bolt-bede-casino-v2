@@ -23,11 +23,7 @@ const Button = styled.button`
 `
 
 export default ({ className, onClick, primary, title }) => (
-  <Button
-    className={className}
-    onClick={onClick}
-    primary={primary}
-  >
+  <Button className={className} onClick={onClick} primary={primary}>
     <span>{title}</span>
   </Button>
 )
