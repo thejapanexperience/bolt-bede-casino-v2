@@ -1,9 +1,9 @@
 // Packages
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-const primaryGradientFrom = '#ff345f'
-const primaryGradientTo = '#ff9268'
+const primaryGradientFrom = '#ff345f';
+const primaryGradientTo = '#ff9268';
 
 const Button = styled.button`
   background-image: ${props =>
@@ -20,10 +20,10 @@ const Button = styled.button`
   padding: 1.5rem 2.5rem;
   position: relative;
   text-transform: uppercase;
-`
+`;
 
 export default ({ className, onClick, primary, title }) => (
   <Button className={className} onClick={onClick} primary={primary}>
     <span>{title}</span>
   </Button>
-)
+);

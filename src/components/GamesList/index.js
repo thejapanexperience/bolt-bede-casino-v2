@@ -1,12 +1,12 @@
 // Packages
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 // Library
-import { GamesListHO } from '@bedegaming/tlob-library'
+import { GamesListHO } from '@bedegaming/tlob-library';
 
 // Components
-import GameItem from '../GameItem'
+import GameItem from '../GameItem';
 
 const Container = styled.div`
   border: 1px solid #f9f9f9;
@@ -16,7 +16,7 @@ const Container = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
   margin: 3rem 0;
   padding: 3rem;
-`
+`;
 
 const GamesList = ({ className, games }) =>
   games.length ? (
@@ -27,7 +27,7 @@ const GamesList = ({ className, games }) =>
     </Container>
   ) : (
     <div>No Games</div>
-  )
+  );
 
-const StyledGamesList = GamesListHO(GamesList)
-export default () => <StyledGamesList />
+const StyledGamesList = GamesListHO(GamesList);
+export default () => <StyledGamesList />;

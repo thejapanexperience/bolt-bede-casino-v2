@@ -1,11 +1,11 @@
 // Packages
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 // Gatsby
 
 // Library
-import { Data as UnstyledData } from '@bedegaming/tlob-library'
+import { Data as UnstyledData } from '@bedegaming/tlob-library';
 
 // Styled Components Layout
 const LayoutData = styled(UnstyledData)`
@@ -50,7 +50,7 @@ const LayoutData = styled(UnstyledData)`
       width: 100%;
     }
   }
-`
+`;
 // Styled Components Styling
 const StyledData = styled(LayoutData)`
   .container {
@@ -77,6 +77,6 @@ const StyledData = styled(LayoutData)`
     overflow-wrap: break-word;
     white-space: pre-wrap;
   }
-`
+`;
 
-export default () => <StyledData />
+export default () => <StyledData />;
