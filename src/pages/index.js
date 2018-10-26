@@ -7,7 +7,7 @@ import React from 'react'
 
 // Components
 import Layout from '../components/Layout'
-import GamesList from '../components/GamesListy'
+import GamesList from '../components/GamesList'
 
 const IndexPage = () => (
   <Layout>

@@ -1,12 +1,11 @@
 // Packages
 import React from 'react'
 import styled from 'styled-components'
-import { Button as UnstyledButton } from '@bedegaming/tlob-library'
 
 const primaryGradientFrom = '#ff345f'
 const primaryGradientTo = '#ff9268'
 
-const Button = styled(UnstyledButton)`
+const Button = styled.button`
   background-image: ${props =>
     props.primary
       ? `linear-gradient(90deg, ${primaryGradientFrom} 0%, ${primaryGradientTo} 100%)`
@@ -23,6 +22,12 @@ const Button = styled(UnstyledButton)`
   text-transform: uppercase;
 `
 
-export default ({ className, primary, title }) => (
-  <Button className={className} primary={primary} title={title} />
+export default ({ className, onClick, primary, title }) => (
+  <Button
+    className={className}
+    onClick={onClick}
+    primary={primary}
+  >
+    <span>{title}</span>
+  </Button>
 )

@@ -5,14 +5,11 @@ import styled from 'styled-components'
 // Gatsby
 import { Link } from 'gatsby'
 
-// Library imports
-import { Header as UnstyledHeader } from '@bedegaming/tlob-library'
-
 // Theme imports
 import Button from '../Button'
 
 // Styles
-const Header = styled(UnstyledHeader)`
+const Header = styled.header`
   align-items: center;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 12px rgba(22, 20, 18, 0.1);

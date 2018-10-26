@@ -7,11 +7,8 @@ const GameItem = styled.div`
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
-  flex: 0 0 calc(33.3333% - 2rem);
+  flex: 0 0 calc(25% - 2rem);
   overflow: hidden;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
   padding-bottom: 7rem;
   position: relative;
   text-decoration: none;
@@ -21,6 +18,11 @@ const GameItem = styled.div`
 
   &:last-child {
     flex-grow: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
+    transform: translateY(-.5rem);
   }
 `
 
@@ -88,15 +90,22 @@ const OverlayButton = styled(Button)`
   }
 `
 
-export default ({ game: { title, playTo, imageUrl } }) => (
-  <GameItem>
-    <Image src={imageUrl} />
-    <Overlay>
-      <OverlayText>{title}</OverlayText>
-      <OverlayButton
-        primary
-        title='Play'
-      />
-    </Overlay>
-  </GameItem>
-)
+export default ({ game: { catalogueName, images } }) => {
+  const thumbnail = images.filter(
+    image => image.label === 'Thumbnail' || image.label === 'thumb'
+  )
+
+  return (
+    <GameItem onClick={() => handleClick(catalogueName)}>
+      <Image src={thumbnail[0].url} />
+      <Overlay>
+        <OverlayText>{catalogueName}</OverlayText>
+        <OverlayButton primary title="Play" />
+      </Overlay>
+    </GameItem>
+  )
+}
+
+const handleClick = (catalogueName) => {
+  console.log(catalogueName)
+}
