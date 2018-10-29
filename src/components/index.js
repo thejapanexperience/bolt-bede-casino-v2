@@ -1,4 +1,5 @@
 export { default as Button } from './Button';
+export { default as Data } from './Data';
 export { default as GameItem } from './GameItem';
 export { default as GamesList } from './GamesList';
 export { default as Header } from './Header';

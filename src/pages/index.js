@@ -2,9 +2,7 @@
 import React from 'react';
 
 // Components
-import Layout from '../components/Layout';
-import Modals from '../components/Modals';
-import GamesList from '../components/GamesList';
+import { Layout, Modals, GamesList } from '../components';
 
 const IndexPage = () => (
   <Layout>
