@@ -1,20 +1,16 @@
 // Packages
-import React from 'react'
-
-// Gatsby
-
-// Library
+import React from 'react';
 
 // Components
-import Layout from '../components/Layout'
-import Login from '../components/Login'
-import Data from '../components/Data'
+import Layout from '../components/Layout';
+import Login from '../components/Login';
+import Data from '../components/Data';
 
 const LoginPage = () => (
   <Layout>
     <Login />
     <Data />
   </Layout>
-)
+);
 
-export default LoginPage
+export default LoginPage;

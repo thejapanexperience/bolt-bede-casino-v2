@@ -6,10 +6,7 @@ import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 // Theme imports
 import theme from '../../theme';
-import Header from '../Header';
-
-// Components
-import Modals from '../Modals';
+import { Header, Modals } from '../';
 
 // Global styles
 const GlobalStyle = createGlobalStyle`
@@ -31,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = styled.main`
-  background-color: #f9f9f9;
+  background-color: ${props => props.theme.colors.greyLight};
   display: flex;
   justify-content: center;
   margin: 0px auto;

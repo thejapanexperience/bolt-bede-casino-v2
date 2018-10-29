@@ -20,6 +20,7 @@ const colors = {
   closeColor: '#bfcbd4',
   primaryGradientFrom: '#ff345f',
   primaryGradientTo: '#ff9268',
+  transparentWhite: 'rgba(255, 255, 255, 0.95)',
 };
 
 const fontSize = {
@@ -30,7 +31,15 @@ const fontSize = {
   large: '1.8rem',
 };
 
+const boxShadows = {
+  header: '0 0.2rem 1.2rem rgba(22, 20, 20, 0.1)',
+  normal: '0 0.4rem 1rem rgba(22, 20, 20, 0.1)',
+  lighter: '0 0.4rem 1rem rgba(22, 20, 20, 0.05)',
+  hover: '0 0.8rem 2rem rgba(22, 20, 20, 0.1)',
+};
+
 const theme = {
+  boxShadows,
   colors,
   fontFamily:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif, ' +
