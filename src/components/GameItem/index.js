@@ -4,9 +4,9 @@ import styled from 'styled-components';
 import Button from '../Button';
 
 const GameItem = styled.div`
-  background-color: #fff;
+  background-color: ${props => props.theme.colors.white};
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.05);
+  box-shadow: ${props => props.theme.boxShadows.normal};
   flex: 0 0 calc(25% - 2rem);
   overflow: hidden;
   padding-bottom: 7rem;
@@ -21,7 +21,7 @@ const GameItem = styled.div`
   }
 
   &:hover {
-    box-shadow: 0 0.8rem 2rem rgba(22, 20, 20, 0.1);
+    box-shadow: ${props => props.theme.boxShadows.hover};
     transform: translateY(-0.5rem);
   }
 `;
@@ -34,7 +34,7 @@ const Image = styled.img`
 
 const Overlay = styled.div`
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: ${props => props.theme.colors.transparentWhite};
   border-radius: 0;
   bottom: 0;
   display: flex;
@@ -55,7 +55,7 @@ const Overlay = styled.div`
 `;
 
 const OverlayText = styled.a`
-  color: #3e3135;
+  color: ${props => props.theme.colors.black};
   font-size: 1.6rem;
   font-weight: 900;
   margin-bottom: 1rem;

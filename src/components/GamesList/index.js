@@ -9,8 +9,8 @@ import { GamesListHO } from '@bedegaming/tlob-library';
 import GameItem from '../GameItem';
 
 const Container = styled.div`
-  border: 1px solid #f9f9f9;
-  box-shadow: 0 4px 10px rgba(22, 20, 20, 0.1);
+  border: 1px solid ${props => props.theme.colors.greyLight};
+  box-shadow: ${props => props.theme.boxShadows.normal};
   display: grid;
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));

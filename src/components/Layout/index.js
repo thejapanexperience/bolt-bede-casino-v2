@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 // Theme imports
-import Header from '../Header';
-
-// Components
-import Modals from '../Modals';
+import theme from '../../theme';
+import { Header, Modals } from '../';
 
 // Global styles
 const GlobalStyle = createGlobalStyle`
@@ -30,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = styled.main`
-  background-color: #f9f9f9;
+  background-color: ${props => props.theme.colors.greyLight};
   display: flex;
   justify-content: center;
   margin: 0px auto;
@@ -54,23 +52,25 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <GlobalStyle />
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>
-          <Modals />
-          <Wrapper>{children}</Wrapper>
-        </Content>
-      </>
+      <ThemeProvider theme={theme}>
+        <>
+          <Helmet
+            title={data.site.siteMetadata.title}
+            meta={[
+              { name: 'description', content: 'Sample' },
+              { name: 'keywords', content: 'sample, something' },
+            ]}
+          >
+            <html lang="en" />
+          </Helmet>
+          <GlobalStyle />
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <Content>
+            <Modals />
+            <Wrapper>{children}</Wrapper>
+          </Content>
+        </>
+      </ThemeProvider>
     )}
   />
 );
