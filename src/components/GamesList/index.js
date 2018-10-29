@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Library
-import { GamesListHO } from '@bedegaming/tlob-library';
+import { GamesListHO } from '@bedegaming/bolt-v2';
 
 // Components
 import GameItem from '../GameItem';

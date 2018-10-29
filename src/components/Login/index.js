@@ -5,7 +5,7 @@ import styled from 'styled-components'
 // Gatsby
 
 // Library
-import { LoginHO } from '@bedegaming/tlob-library'
+import { LoginHO } from '@bedegaming/bolt-v2'
 
 // Components
 import Button from '../Button'

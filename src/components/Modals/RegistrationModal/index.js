@@ -1,18 +1,29 @@
+// @flow
+
 // Packages
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 // Gatsby
 
 // Library
-import { RegistrationHO } from '@bedegaming/tlob-library'
+import { RegistrationHO } from '@bedegaming/bolt-v2';
 
 // Components
-import Button from '../../Button'
+import Button from '../../Button';
 
-// Make available to children
-const Registration = props => {
-  const { className, handleChange, handleSubmit, password, username } = props
+// Props
+type Props = {
+  handleChange: Function,
+  submitRegistration: Function,
+  closeModals: Function,
+  className: string,
+  password: string,
+  username: string,
+};
+
+const Registration = (props: Props) => {
+  const { className, handleChange, submitRegistration, password, username, closeModals } = props;
 
   return (
     <div className={className}>
@@ -23,27 +34,17 @@ const Registration = props => {
         <div>
           <label>
             User Name:
-            <input
-              type="text"
-              name="username"
-              value={username}
-              onChange={handleChange}
-            />
+            <input type="text" name="username" value={username} onChange={handleChange} />
           </label>
           <label>
             Password:
-            <input
-              type="text"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
+            <input type="text" name="password" value={password} onChange={handleChange} />
           </label>
           <Button
             type="button"
             className="submitButton"
             primary="primary"
-            onClick={handleSubmit}
+            onClick={submitRegistration}
             title="Register"
           />
 
@@ -51,16 +52,16 @@ const Registration = props => {
             type="button"
             className="closeButton"
             primary="primary"
-            onClick={() => props.setModal('none')}
+            onClick={closeModals}
             title="X"
           />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const UnstyledRegistrationModal = RegistrationHO(Registration)
+const UnstyledRegistrationModal = RegistrationHO(Registration);
 
 // Styled Components Layout
 const LayoutRegistrationModal = styled(UnstyledRegistrationModal)`
@@ -72,8 +73,8 @@ const LayoutRegistrationModal = styled(UnstyledRegistrationModal)`
   height: calc(100% - 8rem);
   padding: 3rem;
   z-index: 500;
-`
+`;
 // Styled Components Styling
-const StyledRegistrationModal = styled(LayoutRegistrationModal)``
+const StyledRegistrationModal = styled(LayoutRegistrationModal)``;
 
-export default () => <StyledRegistrationModal />
+export default () => <StyledRegistrationModal />;
