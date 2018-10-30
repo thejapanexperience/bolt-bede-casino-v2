@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -22,12 +22,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-root-import`,
       options: {
-        'tlob-theme': path.join(__dirname, 'src'),
-        'tlob-theme-config': path.join(__dirname, 'src/config'),
+        'bolt-bede-casino-v2': path.join(__dirname, 'src'),
+        'bolt-bede-casino-v2-config': path.join(__dirname, 'src/config'),
 
         // Turn on local dev for library
-        '@bedegaming/tlob-library': path.join(__dirname, '../tlob-library/lib'),
+        // '@bedegaming/bolt-v2': path.join(__dirname, '../bolt-v2/lib'),
       },
     },
   ],
-}
+};

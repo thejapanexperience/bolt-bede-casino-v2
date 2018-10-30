@@ -4,7 +4,7 @@ import styled from 'styled-components'
 // Gatsby
 
 // Library
-import { ModalsHO } from '@bedegaming/tlob-library'
+import { ModalsHO } from '@bedegaming/bolt-v2'
 
 // Components
 import LoginModal from './LoginModal'

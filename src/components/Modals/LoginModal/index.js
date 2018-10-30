@@ -1,25 +1,29 @@
+// @flow
+
 // Packages
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 // Gatsby
 
 // Library
-import { LoginHO } from '@bedegaming/tlob-library'
+import { LoginHO } from '@bedegaming/bolt-v2';
 
 // Components
-import Button from '../../Button'
+import Button from '../../Button';
 
-// Make available to children
-const Login = props => {
-  const {
-    className,
-    handleChange,
-    submitLogin,
-    password,
-    username,
-    closeModals,
-  } = props
+// Props
+type Props = {
+  handleChange: Function,
+  submitLogin: Function,
+  closeModals: Function,
+  className: string,
+  password: string,
+  username: string,
+};
+
+const Login = (props: Props) => {
+  const { className, handleChange, submitLogin, password, username, closeModals } = props;
 
   return (
     <div className={className}>
@@ -30,21 +34,11 @@ const Login = props => {
         <div>
           <label>
             User Name:
-            <input
-              type="text"
-              name="username"
-              value={username}
-              onChange={handleChange}
-            />
+            <input type="text" name="username" value={username} onChange={handleChange} />
           </label>
           <label>
             Password:
-            <input
-              type="text"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
+            <input type="text" name="password" value={password} onChange={handleChange} />
           </label>
           <Button
             type="button"
@@ -64,10 +58,10 @@ const Login = props => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-const UnstyledLoginModal = LoginHO(Login)
+const UnstyledLoginModal = LoginHO(Login);
 
 // Styled Components Layout
 const LayoutLoginModal = styled(UnstyledLoginModal)`
@@ -79,8 +73,8 @@ const LayoutLoginModal = styled(UnstyledLoginModal)`
   height: calc(100% - 8rem);
   padding: 3rem;
   z-index: 500;
-`
+`;
 // Styled Components Styling
-const StyledLoginModal = styled(LayoutLoginModal)``
+const StyledLoginModal = styled(LayoutLoginModal)``;
 
-export default () => <StyledLoginModal />
+export default () => <StyledLoginModal />;

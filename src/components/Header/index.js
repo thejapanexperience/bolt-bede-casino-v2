@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 // Library
-import { HeaderHO } from '@bedegaming/tlob-library';
+import { HeaderHO } from '@bedegaming/bolt-v2';
 
 // Theme imports
 import Button from '../Button';

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // Gatsby
 
 // Library
-import { Data as UnstyledData } from '@bedegaming/tlob-library';
+import { Data as UnstyledData } from '@bedegaming/bolt-v2';
 
 // Styled Components Layout
 const LayoutData = styled(UnstyledData)`

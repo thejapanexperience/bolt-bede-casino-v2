@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import { store } from '@bedegaming/tlob-library'
+import { store } from '@bedegaming/bolt-v2'
 import { getData } from './src/config/initialise.js'
 
 export const wrapRootElement = ({ element }) => {

@@ -1,7 +1,7 @@
 // Packages
 
 // Action Creators
-import { actions } from '@bedegaming/tlob-library'
+import { actions } from '@bedegaming/bolt-v2'
 const { getFeeds, getGames } = actions
 // Components
 
