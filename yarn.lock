@@ -801,9 +801,9 @@
     to-fast-properties "^2.0.0"
 
 "@bedegaming/bolt-v2@^1.0.0":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@bedegaming/bolt-v2/-/bolt-v2-1.0.20.tgz#c4a13805aabe84d19e9da1c16ed032791d2d3aaa"
-  integrity sha512-ZhlvenDK5zcKMG8ok8DZCOgQYwAkv2268uZhGTAM/Ga4FoJbn3wlL5Ihyuw7Be4o0n8qrUswOdkSKvwc1vCbig==
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/@bedegaming/bolt-v2/-/bolt-v2-1.0.22.tgz#4db3bf3f0894bb18ae0d76621623012e539c8ef8"
+  integrity sha512-mfsdSxdAdEcX+/LDklZ+/wLOMO4TkbbIr83S37hvvVlH0qGaUxjFCQn5ulYs1uOgVuGqMTpaFp5twWdIZYAHBQ==
 
 "@bedegaming/spine-player-client-js@^0.4.3":
   version "0.4.3"

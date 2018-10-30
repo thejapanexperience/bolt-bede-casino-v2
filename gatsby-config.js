@@ -26,7 +26,7 @@ module.exports = {
         'bolt-bede-casino-v2-config': path.join(__dirname, 'src/config'),
 
         // Turn on local dev for library
-        '@bedegaming/bolt-v2': path.join(__dirname, '../bolt-v2/lib'),
+        // '@bedegaming/bolt-v2': path.join(__dirname, '../bolt-v2/lib'),
       },
     },
   ],
