@@ -8,6 +8,7 @@ const Loading = keyframes`
     opacity: 0;
     transform: translate3d(0, 0, 3rem);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);

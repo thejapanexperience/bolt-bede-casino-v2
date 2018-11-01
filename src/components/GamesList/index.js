@@ -13,6 +13,7 @@ const Loading = keyframes`
   50% {
     opacity: 0.2;
   }
+
   100% {
     opacity: 1;
   }
