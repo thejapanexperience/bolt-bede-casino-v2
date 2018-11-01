@@ -1,7 +1,6 @@
 // Packages
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'gatsby';
 
 // Library
 import { GamesListHO } from '@bedegaming/bolt-v2';
