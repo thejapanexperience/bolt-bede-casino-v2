@@ -1,13 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import Button from '../Button';
 
+const Loading = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0, 3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
 const GameItem = styled.div`
+  animation: ${Loading} 750ms ease-out 0s 1 both;
   background-color: ${props => props.theme.colors.white};
   border-radius: 5px;
   box-shadow: ${props => props.theme.boxShadows.normal};
-  flex: 0 0 calc(25% - 2rem);
   overflow: hidden;
   padding-bottom: 7rem;
   position: relative;
@@ -90,11 +102,11 @@ const OverlayButton = styled(Button)`
   }
 `;
 
-export default ({ game: { catalogueName, images } }) => {
+export default ({ game: { catalogueName, images }, style }) => {
   const thumbnail = images.filter(image => image.label === 'Thumbnail' || image.label === 'thumb');
 
   return (
-    <GameItem onClick={() => handleClick(catalogueName)}>
+    <GameItem onClick={() => handleClick(catalogueName)} style={style}>
       <Image src={thumbnail[0].url} />
       <Overlay>
         <OverlayText>{catalogueName}</OverlayText>

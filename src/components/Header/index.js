@@ -36,7 +36,12 @@ const LogoLink = styled(Link)`
 
 const Buttons = styled.div`
   display: flex;
+  flex-direction: column;
   padding: 1rem;
+
+  @media (${props => props.theme.mediaQueries.medium}) {
+    flex-direction: row;
+  }
 `;
 
 export default HeaderHO(({ className, siteTitle, openLoginModal, openRegistrationModal }) => (

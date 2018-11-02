@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
+  p {
+    font-size: 1.4rem;
+  }
 `;
 
 const Content = styled.main`

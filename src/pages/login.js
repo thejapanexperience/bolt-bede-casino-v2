@@ -2,9 +2,7 @@
 import React from 'react';
 
 // Components
-import Layout from '../components/Layout';
-import Login from '../components/Login';
-import Data from '../components/Data';
+import { Layout, Login, Data } from '../components';
 
 const LoginPage = () => (
   <Layout>

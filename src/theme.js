@@ -38,6 +38,15 @@ const boxShadows = {
   hover: '0 0.8rem 2rem rgba(22, 20, 20, 0.1)',
 };
 
+const mediaQueries = {
+  xSmall: 'min-width: 320px',
+  small: 'min-width: 460px',
+  medium: 'min-width: 960px',
+  large: 'min-width: 1280px',
+  xLarge: 'min-width: 1280px',
+  xxLarge: 'min-width: 1500px',
+};
+
 const theme = {
   boxShadows,
   colors,
@@ -45,6 +54,7 @@ const theme = {
     '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif, ' +
     '"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"', // emoji fonts
   fontSize,
+  mediaQueries,
 };
 
 export default theme;
