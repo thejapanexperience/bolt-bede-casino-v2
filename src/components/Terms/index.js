@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // Gatsby
 
 // Library
-import { TermsHO, languageSelector } from '@bedegaming/bolt-v2';
+import { TermsHO } from '@bedegaming/bolt-v2';
 
 // Components
 
@@ -14,13 +14,19 @@ import { en_GB, en_US } from './language';
 
 // Make available to children
 const Terms = props => {
-  const { className, language } = props;
+  const { className, language, languageSelector } = props;
 
   const lang = languageSelector(language, { en_GB, en_US });
+  const termsArray = lang.terms.split('\n');
+  const terms = (
+    <div>
+      {termsArray.map((term, i) => {
+        return <p key={i}>{term}</p>;
+      })}
+    </div>
+  );
 
-  console.log(lang.terms);
-
-  return <div className={className}>{lang.terms}</div>;
+  return <div className={className}>{terms}</div>;
 };
 
 const UnstyledTerms = TermsHO(Terms);

@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 // Library
-import { HeaderHO, languageSelector } from '@bedegaming/bolt-v2';
+import { HeaderHO } from '@bedegaming/bolt-v2';
 
 // Theme imports
 import Button from '../Button';
@@ -58,6 +58,7 @@ type Props = {
   openLoginModal: Function,
   openRegistrationModal: Function,
   setLanguage: Function,
+  languageSelector: Function,
   className: string,
   siteTitle: string,
   language: string,
@@ -71,6 +72,7 @@ const UnwrappedHeader = (props: Props) => {
     openRegistrationModal,
     language,
     setLanguage,
+    languageSelector,
   } = props;
 
   const lang = languageSelector(language, { en_GB, en_US });
