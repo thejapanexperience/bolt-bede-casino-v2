@@ -11,7 +11,11 @@
     "gatsby-plugin-manifest": "^2.0.7",
     "gatsby-plugin-offline": "^2.0.10",
     "gatsby-plugin-react-helmet": "^3.0.1",
+<<<<<<< HEAD
     "gatsby-source-filesystem": "^2.0.7",
+=======
+    "gatsby-source-filesystem": "^2.0.6",
+>>>>>>> 26c81cc622d4900f0b352c08969d2c50cd1814af
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",

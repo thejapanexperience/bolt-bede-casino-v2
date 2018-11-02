@@ -4654,30 +4654,50 @@ gatsby-react-router-scroll@^2.0.1:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
+<<<<<<< HEAD
 gatsby-source-filesystem@^2.0.7:
   version "2.0.7"
   resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.7.tgz#ccccbcfb4e5ca8d51a025445b74bec16f8819d62"
   integrity sha512-dzX3whJK/0m/1JgPncZIcvc9Sn/76l/Q0Qg3+UeG64AQOSLdDaxUT0OwidYA61PdxlnJer14VTk6+2/i2ce7PA==
+=======
+gatsby-source-filesystem@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.6.tgz#6ed2ed8cc0f04e20cfac038a3c262f9358fe604b"
+  integrity sha512-suaCHZgu2wW/5dpIhu/feOqGQyLPgAG7VsEBedawmbXJKP64DObQfMxpSKikxRm2bZ7prUg3Hl9Y2EvMCi194w==
+>>>>>>> 26c81cc622d4900f0b352c08969d2c50cd1814af
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
     bluebird "^3.5.0"
     chokidar "^1.7.0"
+<<<<<<< HEAD
     file-type "^10.2.0"
+=======
+>>>>>>> 26c81cc622d4900f0b352c08969d2c50cd1814af
     fs-extra "^5.0.0"
     got "^7.1.0"
     md5-file "^3.1.1"
     mime "^2.2.0"
     pretty-bytes "^4.0.2"
+<<<<<<< HEAD
     read-chunk "^3.0.0"
+=======
+>>>>>>> 26c81cc622d4900f0b352c08969d2c50cd1814af
     slash "^1.0.0"
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
+<<<<<<< HEAD
 gatsby@^2.0.32:
   version "2.0.36"
   resolved "https://registry.npmjs.org/gatsby/-/gatsby-2.0.36.tgz#8b709d7f7e5c27bef807265b650a0f161c1b6934"
   integrity sha512-LaC4wnre3kh6cQ1jIpeKiLTMMaIwiwqCp5kn+IXav14Zg44uyonlD9WpCNyBYKGBjtf4DL/AHiZm8tnhiNFifA==
+=======
+gatsby@^2.0.0:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.32.tgz#ec087623f96905f3539e00758bff86d5315ea14d"
+  integrity sha512-DOTz3qtwTqfHp5eLoWVYImai03CWxdFwQyJt9NmskoufGFQB+Q6xqoveG9lm020/9EKtnB/qOJ0QnWHdwN6E0g==
+>>>>>>> 26c81cc622d4900f0b352c08969d2c50cd1814af
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
