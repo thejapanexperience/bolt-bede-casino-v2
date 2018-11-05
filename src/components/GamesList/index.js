@@ -46,7 +46,7 @@ const GamesList = ({ className, games }) =>
   ) : (
     <Container>
       {Array.apply(null, Array(12)).map((item, i) => {
-        return <LoadingGameItem style={{ animationDelay: `${i * 50}ms` }} />;
+        return <LoadingGameItem key={i} style={{ animationDelay: `${i * 50}ms` }} />;
       }, this)}
     </Container>
   );

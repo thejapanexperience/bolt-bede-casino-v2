@@ -1,31 +1,22 @@
-import React from 'react'
-import styled from 'styled-components'
-
-// Gatsby
+import React from 'react';
+import styled from 'styled-components';
 
 // Library
-import { ModalsHO } from '@bedegaming/bolt-v2'
+import { ModalsHO } from '@bedegaming/bolt-v2';
 
 // Components
-import LoginModal from './LoginModal'
-import RegistrationModal from './RegistrationModal'
+import LoginModal from './LoginModal';
+import RegistrationModal from './RegistrationModal';
 
-const Modals = props => {
-  const { modals } = props
+const Modals = ({ modals }) => {
   if (modals === 'loginModal') {
-    return <LoginModal />
+    return <LoginModal />;
   }
+
   if (modals === 'registrationModal') {
-    return <RegistrationModal />
+    return <RegistrationModal />;
   }
-  return <div />
-}
+};
 
-const UnstyledModals = ModalsHO(Modals)
-
-// Styled Components Layout
-const LayoutModals = styled(UnstyledModals)``
-// Styled Components Styling
-const StyledModals = styled(LayoutModals)``
-
-export default () => <StyledModals />
+const StyledModals = ModalsHO(Modals);
+export default () => <StyledModals />;

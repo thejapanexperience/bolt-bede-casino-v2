@@ -16,7 +16,7 @@ const Loading = keyframes`
 `;
 
 const GameItem = styled.div`
-  animation: ${Loading} 750ms ease-out 0s 1 both;
+  animation: ${Loading} 750ms ease-out 0s 1 backwards;
   background-color: ${props => props.theme.colors.white};
   border-radius: 5px;
   box-shadow: ${props => props.theme.boxShadows.normal};
