@@ -10,9 +10,17 @@ import { LoginHO } from '@bedegaming/bolt-v2';
 // Components
 import { Button } from '../../';
 
-const Container = styled.div`
-  position: absolute;
-`;
+const ModalContainer = styled.div`
+  background-color: ${props => props.theme.colors.white};
+  border-radius: 5px;
+  box-shadow: ${props => props.theme.boxShadows.normal};
+  left: 50%;
+  padding: 3rem;
+  position: fixed;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 1;
+`
 
 // Props
 type Props = {
@@ -32,11 +40,11 @@ const Login = ({
   username,
   closeModals,
 }: Props) => (
-  <Container className={className}>
-    <div className="container h1Container">
+  <ModalContainer>
+    <div>
       <h1>Login </h1>
     </div>
-    <div className="container formContainer">
+    <div>
       <div>
         <label>
           User Name:
@@ -57,9 +65,8 @@ const Login = ({
         <Button type="button" className="closeButton" onClick={closeModals} title="X" />
       </div>
     </div>
-  </Container>
+  </ModalContainer>
 );
 
 const StyledLoginModal = LoginHO(Login);
-
 export default () => <StyledLoginModal />;
