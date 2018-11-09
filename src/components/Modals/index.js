@@ -23,23 +23,29 @@ const ModalOverlay = styled.div`
   z-index: 10;
 `
 
-const Modals = ({ modals }) => (
-  <ModalOverlay isVisible={modals !== 'none'}>
-    {
-      (() => {
-        switch (modals) {
-          case 'loginModal':
-            return <LoginModal />
+const Modals = ({ modals }) => {
 
-          case 'registrationModal':
-            return <RegistrationModal />
-          default:
-            return null;
-        }
-      })()
-    }
-  </ModalOverlay>
-)
+  const isVisible = !Array.isArray(modals);
+
+  return (
+    <ModalOverlay isVisible={isVisible}>
+      {
+        (() => {
+          switch (modals) {
+            case 'loginModal':
+              return <LoginModal />
+
+            case 'registrationModal':
+              return <RegistrationModal />
+
+            default:
+              return null;
+          }
+        })()
+      }
+    </ModalOverlay>
+  )
+}
 
 const StyledModals = ModalsHO(Modals)
 export default () => <StyledModals />
