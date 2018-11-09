@@ -1,5 +1,7 @@
 const path = require('path');
 
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Bede Casino',
@@ -27,6 +29,13 @@ module.exports = {
 
         // Turn on local dev for library
         '@bedegaming/bolt-v2': path.join(__dirname, '../bolt-v2/lib'),
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
   ],
