@@ -1,7 +1,6 @@
+// @flow
 import React from 'react'
 import styled from 'styled-components'
-
-// Gatsby
 
 // Library
 import { ModalsHO } from '@bedegaming/bolt-v2'
@@ -10,22 +9,43 @@ import { ModalsHO } from '@bedegaming/bolt-v2'
 import LoginModal from './LoginModal'
 import RegistrationModal from './RegistrationModal'
 
-const Modals = props => {
-  const { modals } = props
-  if (modals === 'loginModal') {
-    return <LoginModal />
-  }
-  if (modals === 'registrationModal') {
-    return <RegistrationModal />
-  }
-  return <div />
+const ModalOverlay = styled.div`
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(3px);
+  height: 100%;
+  left: 0;
+  opacity: ${props => props.isVisible ? 1 : 0};
+  pointer-events: ${props => props.isVisible ? 'all' : 'none'};
+  position: fixed;
+  top: 0;
+  transition: all 300ms ease;
+  width: 100%;
+  z-index: 10;
+`
+
+const Modals = ({ modals }) => {
+
+  const isVisible = !Array.isArray(modals);
+
+  return (
+    <ModalOverlay isVisible={isVisible}>
+      {
+        (() => {
+          switch (modals) {
+            case 'loginModal':
+              return <LoginModal />
+
+            case 'registrationModal':
+              return <RegistrationModal />
+
+            default:
+              return null;
+          }
+        })()
+      }
+    </ModalOverlay>
+  )
 }
 
-const UnstyledModals = ModalsHO(Modals)
-
-// Styled Components Layout
-const LayoutModals = styled(UnstyledModals)``
-// Styled Components Styling
-const StyledModals = styled(LayoutModals)``
-
+const StyledModals = ModalsHO(Modals)
 export default () => <StyledModals />
