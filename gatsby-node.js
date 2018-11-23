@@ -15,7 +15,7 @@ exports.createPages = ({ actions, graphql }) => {
       graphql(
         `
           {
-            allContentfulContent(filter: {node_locale: {regex: "/en-GB/"}}) {
+            allContentfulContent(filter: {node_locale: {eq: "en-GB"}}) {
               edges {
                 node {
                   slug
