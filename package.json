@@ -1,7 +1,7 @@
 {
   "name": "bolt-bede-casino-v2",
   "description": "Bolt Bede Casino v2",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Bolt team",
   "dependencies": {
     "@bedegaming/bolt-v2": "^1.0.0",
